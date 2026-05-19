@@ -33,7 +33,7 @@ data "aws_subnets" "public" {
   }
   filter {
     name   = "availabilityZone"
-    values = [data.aws_vpc.default.id]
+    values = ["ap-south-1a","ap-south-1b"]
   }
 }
 #cluster provision
