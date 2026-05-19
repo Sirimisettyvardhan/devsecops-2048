@@ -32,7 +32,7 @@ data "aws_subnets" "public" {
     values = [data.aws_vpc.default.id]
   }
   filter {
-    name   = "availability zones"
+    name   = "availabilityZone"
     values = [data.aws_vpc.default.id]
   }
 }
