@@ -31,6 +31,10 @@ data "aws_subnets" "public" {
     name   = "vpc-id"
     values = [data.aws_vpc.default.id]
   }
+  filter {
+    name   = "availability zones"
+    values = [data.aws_vpc.default.id]
+  }
 }
 #cluster provision
 resource "aws_eks_cluster" "example" {
